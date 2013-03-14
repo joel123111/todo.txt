@@ -1,3 +1,5 @@
+package org.cssquare.todo;
+
 public class Task {
 
 	private String task;

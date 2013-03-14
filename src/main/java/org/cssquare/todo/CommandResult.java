@@ -1,13 +1,17 @@
+package org.cssquare.todo;
+
+import java.util.*;
+
 public class CommandResult {
 
-	private TaskList tl;
+	private ArrayList<Task> tl;
 	private String res;
 	
-	public CommandResult (TaskList tlIn, String resIn) {
+	public CommandResult (ArrayList<Task> tlIn, String resIn) {
 		tl = tlIn;
 		res = resIn;
 	}
 	
-	public TaskList getTaskList() { return tl; }
+	public ArrayList<Task> getTaskList() { return tl; }
 	public String getResult() { return res; }
 }

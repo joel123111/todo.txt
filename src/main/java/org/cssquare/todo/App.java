@@ -1,12 +1,15 @@
 package org.cssquare.todo;
 
+import java.util.*;
+import java.io.*;
+
 public class App 
 {
     public static void main( String[] args )
     {
  		try {
 			File f = new File("todo.txt");
-			TaskList tl = FileHandler.readFile(f);
+			ArrayList<Task> tl = FileHandler.readFile(f);
 			/*
 			CommandResult res = CommandHandler.dispatch(tl, args);
 			FileHandler.writeFile(res.getTaskList());
