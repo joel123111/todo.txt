@@ -26,7 +26,7 @@ public class FileHandler {
 		PrintWriter pw = new PrintWriter(buf);
 
 		for (Task t : tl) {
-			pw.println(t.getTask());
+			pw.println(t);
 		}
 
 		out.close();
