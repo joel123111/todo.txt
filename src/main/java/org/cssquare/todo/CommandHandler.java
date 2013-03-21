@@ -52,8 +52,12 @@ public class CommandHandler{
             return replace(index, args2, origTaskList);
 
         }else if(command.equalsIgnoreCase("list")){
+<<<<<<< HEAD
             
             return list(origTaskList);            
+=======
+             return list(origTaskList);        
+>>>>>>> upstream/master
         
         }else{
             return notValid(origTaskList);
@@ -111,7 +115,7 @@ public class CommandHandler{
     }
     
     private static CommandResult list(ArrayList<Task> unchanged) {
-        String result = "hi";
+        String result = "";
         for (Task t : unchanged) {
             result += t.getTask() + "\n";
         }
