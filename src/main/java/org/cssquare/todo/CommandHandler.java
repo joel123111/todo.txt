@@ -52,9 +52,7 @@ public class CommandHandler{
             return replace(index, args2, origTaskList);
 
         }else if(command.equalsIgnoreCase("list")){
-            
-            int index = Integer.parseInt(args1);
-            return replace(index, args2, origTaskList);            
+             return list(origTaskList);        
         
         }else{
             return notValid(origTaskList);
@@ -112,7 +110,7 @@ public class CommandHandler{
     }
     
     private static CommandResult list(ArrayList<Task> unchanged) {
-        String result = "hi";
+        String result = "";
         for (Task t : unchanged) {
             result += t.getTask() + "\n";
         }
