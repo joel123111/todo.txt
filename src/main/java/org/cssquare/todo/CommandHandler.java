@@ -1,5 +1,4 @@
 package org.cssquare.todo;
-// D. Sebastian Andrews
 //stuff to be done here
 
 import java.lang.StringBuffer;
@@ -60,7 +59,7 @@ public class CommandHandler{
   return new CommandResult (list2deletefrom, result);
  }
 
- //Adds a Task to the end of the list
+ //Appends the string to the task
  private static CommandResult append(int index, String txt2append, ArrayList<Task> list2appendto){
   String beginning = list2appendto.get(index).getTask();
   list2appendto.get(index).setTask(beginning + " " + txt2append);
@@ -68,7 +67,7 @@ public class CommandHandler{
   return new CommandResult (list2appendto, result);
  }
  
- //Adds a Task to the end of the list
+ //Prepends a string to the task
  private static CommandResult prepend(int index, String txt2prepend, ArrayList<Task> list2prependto){
   String end = list2prependto.get(index).getTask();
   list2prependto.get(index).setTask(txt2prepend + " " + end);
@@ -76,7 +75,7 @@ public class CommandHandler{
   return new CommandResult (list2prependto, result);
  }
 
- //Adds a Task to the end of the list
+ //Replaces the task
  private static CommandResult replace(int index, String txt2replace, ArrayList<Task> list2replacewith){
   String prev_task = list2replacewith.get(index).getTask();
   Task temp = new Task(txt2replace);
@@ -84,6 +83,14 @@ public class CommandHandler{
   String result = prev_task + " replaced with: " + list2replacewith.get(index).getTask();
   return new CommandResult(list2replacewith, result);
  }
+
+  private static CommandResult list(ArrayList<Task> unchanged) {
+        String result = "hi";
+        for (Task t : unchanged) {
+            result += t.getTask() + "\n";
+        }
+        return new CommandResult(unchanged, result);
+    }
 
  private static CommandResult notValid(ArrayList<Task> unchanged) {
   String result = "Invalid command";
