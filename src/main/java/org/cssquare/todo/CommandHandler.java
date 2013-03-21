@@ -53,8 +53,7 @@ public class CommandHandler{
 
         }else if(command.equalsIgnoreCase("list")){
             
-            int index = Integer.parseInt(args1);
-            return replace(index, args2, origTaskList);            
+            return list(origTaskList);            
         
         }else{
             return notValid(origTaskList);
