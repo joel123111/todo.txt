@@ -10,5 +10,9 @@ public class Task {
 	}
 	
 	public String getTask() { return task; };
+
+	public void setTask(String newTaskText) {
+		task = newTaskText;
+	}
 	
 }
