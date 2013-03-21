@@ -4,7 +4,7 @@ package org.cssquare.todo;
 
 import java.lang.StringBuffer;
 import java.util.ArrayList;
-
+import org.cssquare.*;
 public class CommandHandler{
  public static CommandResult dispatch(String[] args, ArrayList<Task> origTaskList){
 

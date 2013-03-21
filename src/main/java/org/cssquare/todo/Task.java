@@ -1,4 +1,5 @@
 package org.cssquare.todo;
+import org.cssquare.*;
 
 public class Task {
 

@@ -2,6 +2,7 @@ package org.cssquare.todo;
 
 import java.io.*;
 import java.util.*;
+import org.cssquare.*;
 
 public class FileHandler {
     

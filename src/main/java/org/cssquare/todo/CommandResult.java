@@ -1,7 +1,7 @@
 package org.cssquare.todo;
 
 import java.util.*;
-
+import org.cssquare.*;
 public class CommandResult {
 
 	private ArrayList<Task> tl;
