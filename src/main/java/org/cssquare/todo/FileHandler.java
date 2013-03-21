@@ -20,9 +20,9 @@ public class FileHandler {
         return taskList;
     }
     
-    public static void writeFile (ArrayList<Task> tl) throws IOException {
+    public static void writeFile (File f, ArrayList<Task> tl) throws IOException {
         final String NEW_LINE = "\n"; 
-        FileWriter out = new FileWriter ("Todo.txt");
+        FileWriter out = new FileWriter (f);
         BufferedWriter writer = new BufferedWriter(out);
         
         for (Task t : tl) {
