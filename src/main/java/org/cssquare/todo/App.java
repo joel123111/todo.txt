@@ -7,17 +7,17 @@ public class App
 {
     public static void main( String[] args )
     {
- 		try {
-			File f = new File("todo.txt");
-			ArrayList<Task> tl = FileHandler.readFile(f);
-			CommandResult res = CommandHandler.dispatch(args, tl);
-			FileHandler.writeFile(res.getTaskList());
-			System.out.print(res.getResult());
-			
-		}
-		catch (Exception e) {
-			System.out.println (e.getMessage());
-		}
-    
+        try {
+            File f = new File("todo.txt");
+            ArrayList<Task> tl = FileHandler.readFile(f);
+            CommandResult res = CommandHandler.dispatch(args, tl);
+            FileHandler.writeFile(res.getTaskList());
+            System.out.println(res.getResult());
+            
+        }
+        catch (Exception e) {
+            System.out.println (e.getMessage());
+        }
+        
     }
 }
