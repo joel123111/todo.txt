@@ -9,8 +9,8 @@ public class CommandHandler{
     public static CommandResult dispatch(String[] args, ArrayList<Task> origTaskList){
         
         String command = args[0];
-        String args1 = "";
-        String args2 = "";
+        String args1 = null;
+        String args2 = null;
         
         
         if (args.length == 1) {
@@ -110,7 +110,7 @@ public class CommandHandler{
     }
     
     private static CommandResult list(ArrayList<Task> unchanged) {
-        String result = "";
+        String result = "TODO: \n";
         for (Task t : unchanged) {
             result += t.getTask() + "\n";
         }
