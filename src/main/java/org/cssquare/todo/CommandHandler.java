@@ -84,6 +84,14 @@ public class CommandHandler{
   return new CommandResult(list2replacewith, result);
  }
 
+  private static CommandResult list(ArrayList<Task> unchanged) {
+        String result = "hi";
+        for (Task t : unchanged) {
+            result += t.getTask() + "\n";
+        }
+        return new CommandResult(unchanged, result);
+    }
+
  private static CommandResult notValid(ArrayList<Task> unchanged) {
   String result = "Invalid command";
   return new CommandResult(unchanged, result);
